@@ -1,0 +1,601 @@
+
+{% extends 'MDShop/base.html' %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%block content%}
+{%load static%}
+<style type="text/css">
+
+        
+
+        #content-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column{
+            width: 500px;
+            
+
+        }
+
+        #featured{
+            max-width: 500px;
+            max-height: 600px;
+            object-fit: cover;
+            cursor: pointer;
+            
+
+        }
+
+
+
+        .thumbnail{
+            object-fit: cover;
+            max-width: 180px;
+            max-height: 100px;
+            cursor: pointer;
+            opacity: 0.5;
+            margin: 5px;
+            
+
+        }
+
+        .thumbnail:hover{
+            opacity:1;
+        }
+
+        .active{
+            opacity: 1;
+        }
+
+        #slide-wrapper{
+            max-width: 500px;
+            display: flex;
+            min-height: 100px;
+            align-items: center;
+        }
+
+        #slider{
+            width: 440px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: hidden;
+
+        }
+
+        #slider{
+            width: 440px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+
+        }
+
+        #slider::-webkit-scrollbar {
+            width: 8px;
+
+        }
+
+        #slider::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+        }
+         
+        #slider::-webkit-scrollbar-thumb {
+          background-color: black;
+          outline: 1px solid slategrey;
+           border-radius: 100px;
+
+        }
+
+        #slider::-webkit-scrollbar-thumb:hover{
+            background-color: black;
+        }
+
+        
+
+        .arrow{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .arrow:hover{
+            opacity: .5;
+            width: 35px;
+            height: 35px;
+        }
+        .botted{
+            justify-content: space-between;display: flex;border-bottom: dotted 1px black;margin-top: 10px;
+        }
+        .botted-1{
+            margin-top: 10px;
+        }
+
+        
+    </style>
+
+<div class="container" style="margin-top: 50px;background-color: white;">
+                                <style>
+                                body{
+                                        background-color: #f4f4f4;
+                                        font-family: MuseoSansCyrl,sans-serif;
+                                }
+
+                                </style>
+
+    <div class="row">
+
+                        <div class="col-md-5" style="height: 650px;">
+                                        <div id="content-wrapper">
+                                            <div class="column">
+                                                <img id="featured" src="{%static 'images/phone.jpg'%}">
+
+                                                <div id="slide-wrapper">
+                                                    
+
+                                                    <div id="slider" style="height: 150px; width: auto;">
+                                                        
+
+                                                    
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                        <img class="thumbnail" src="{%static 'images/phone.jpg'%}">
+                                                        <img class="thumbnail" src="{%static 'images/geop.png'%}">
+                                                
+                                                
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+            
+
+
+
+
+
+            <div class="col-md-7">
+                <h3 style="margin-left: 10px;">Смартфон Apple iPhone 11 64GB Black</h3>
+
+                    <hr>
+                <div class="col-md-12">
+
+                    <div class="col-md-6">
+                        
+                        
+
+
+                        <h1 style="">20 000₸</h1>
+
+                        <div class="kacompos-dakucels" style="margin-top: 30px;margin-left: -7px;">
+                          
+                          <button class="constructos-knopok adenscarlub">Добавить в корзину</button>
+                          
+                        </div>
+                        <h5 style="margin-top: 50px; ">Описание  |   <span><a href="">Все характеристики</a></span></h5>
+
+
+                        
+
+<p style="margin-top: 15px;">
+
+
+                        <p style=" margin-top: -10px; margin-left: 10px;   font-family: MuseoSansCyrl,sans-serif;">Диагональ экрана : <b> 81 см</b></p>
+                        <p style=" margin-top: -10px; margin-left: 10px; font-family: MuseoSansCyrl,sans-serif;">Разрешение дисплея : <b> 720x1600</b></p>
+                </p>
+                    </div>
+
+
+
+                    <div class="col-md-6">
+
+
+
+
+                        
+                    </div>
+
+
+
+                
+            </div>
+
+        
+    
+              
+          
+            
+        </div>
+        
+    </div>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="container">
+<div class="wrapper">
+    <div class="tabs">
+        <ul>
+            <li class="active">
+                
+                <span class="text">О товаре</span>
+            </li>
+            <li>
+                
+                <span class="text" style="">Характеристика</span>
+            </li>
+            <li>
+                
+                <span class="text">Отзывы</span>
+            </li>
+            <li>
+                
+                <span class="text">Наличие товара</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="tab_wrap" style="display: block;">
+            <div class="title">Letter</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+           
+            <div class="tab_content">
+                <div class="row">
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <h3><b>Основные характеристики</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Серия</span>
+                                    <span>iPhone 11</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Модельный год</span>
+                                    <span>2019</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3><b>Дисплей</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Число пикселей на дюйм (PPI)</span>
+                                    <span>326</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Разрешение дисплея</span>
+                                    <span>828x1792</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Диагональ дисплея, дюйм</span>
+                                    <span>6.1</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Тип матрицы</span>
+                                    <span>Liquid Retina HD</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-md-12" style="margin-top: 30px;">
+                        <div class="col-md-6">
+                            <h3><b>Процессор</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Производитель процессора</span>
+                                    <span>Apple</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Операционная система</span>
+                                    <span>iOS 13</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Модель процессора</span>
+                                    <span>A13 Bionic</span>
+                                </li>
+
+                                
+
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6" >
+                            <h3><b>Память</b></h3>
+                            <ul class="botted-1">
+                                <li class="botted" style="">
+                                    <span>Максимальный объем поддерживаемой карты памяти</span>
+                                    <span>Не поддерживает</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Объем оперативной памяти</span>
+                                    <span>4</span>
+                                </li>
+                                <li class="botted">
+                                    <span>Объём встроенной памяти</span>
+                                    <span>64</span>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+            <div class="title">Phone</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+        <div class="tab_wrap" style="display: none;">
+            <div class="title">Smart Phone</div>
+            <div class="tab_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem inventore perspiciatis alias, magni provident nulla recusandae odio consequatur praesentium officia non voluptate voluptatum debitis consequuntur omnis incidunt fuga eaque sit aliquam nemo. Recusandae voluptatibus excepturi, voluptates inventore nulla aliquid porro a asperiores beatae quas quo incidunt at, cumque minima officiis error eius dignissimos animi ullam unde odit! Nobis aut animi quibusdam molestias libero, facere vel cum atque incidunt esse! Libero ipsam praesentium sit, enim corrupti quia nobis obcaecati nostrum voluptatem totam nulla delectus ipsa facilis optio quis iure unde repudiandae voluptas temporibus, ad veritatis dolorem, culpa maiores. Dicta, quod neque.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script type="text/javascript">
+            let thumbnails = document.getElementsByClassName('thumbnail')
+            let activeImages = document.getElementsByClassName('active')
+            for (var i=0; i < thumbnails.length; i++){
+                thumbnails[i].addEventListener('mouseover', function(){
+
+                    if (activeImages.length > 0){
+                        activeImages[0].classList.remove('active')
+                    }
+                
+                    this.classList.add('active')
+                    document.getElementById('featured').src = this.src
+                })
+
+
+            }
+
+            const buttonRight = document.getElementById('slideRight');
+            const buttonLeft = document.getElementById('slideLeft');
+
+
+            buttonRight.addEventListener('click', function(){
+                document.getElementById('slider').scrollLeft += 180;
+            })
+
+
+
+            buttonLeft.addEventListener('click', function(){
+              document.getElementById('slider').scrollLeft -= 180;
+            })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+*{
+    list-style: none;
+    
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+    margin-top: 10px;
+    
+}
+
+.tabs ul{
+    display: flex;
+    background: white;
+    width: 100%;
+    
+    margin-bottom: 25px;
+}
+
+.tabs ul li{
+    width: 285px;
+    padding: 15px;
+    border-right: 1px solid #dddddd;
+    text-align: center;
+    color: #3b3b3b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.tabs ul li .icon{
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+    border-right: 0px;
+}
+
+.tabs ul li:before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #028f68;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+    background: #e8f5f1;
+    color: #028f68;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+    opacity: 1;
+}
+
+.content{
+    background: #fbfbfb;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tab_wrap .title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tab_wrap .tab_content p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+</style>
+<script type="text/javascript">
+    
+
+    var tabs = document.querySelectorAll(".tabs ul li");
+        var tab_wraps = document.querySelectorAll(".tab_wrap");
+
+        tabs.forEach(function(tab, tab_index){
+            tab.addEventListener("click", function(){
+                tabs.forEach(function(tab){
+                    tab.classList.remove("active");
+                })
+                tab.classList.add("active");
+
+                tab_wraps.forEach(function(content, content_index){
+                    if(content_index == tab_index){
+                        content.style.display = "block";
+                    }
+                    else{
+                        content.style.display = "none";
+                    }
+                })
+
+            })
+        })
+</script>
+{%endblock%}
